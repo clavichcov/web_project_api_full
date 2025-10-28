@@ -1,0 +1,27 @@
+.form__input--type-error {
+    border-bottom: 1px solid #FF0000;
+  }
+  
+  .form__error--active {
+    
+    left: 0;
+    color: #FF0000;
+    font-size: 12px;
+    height: 16px;
+    display: block;
+    margin-top: 6px;
+  }
+
+  .form__button--submit-active{
+    background-color: #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+
+  .form__button--submit-inactive {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #FFF;
+  }
+
+  

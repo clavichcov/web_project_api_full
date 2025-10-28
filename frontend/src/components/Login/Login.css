@@ -1,0 +1,83 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.login__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 60px 0 0 0;
+    width: 358px;
+}
+
+.login__title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: auto;
+    margin-bottom: 24px;
+    width: 100%;
+    text-align: center;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.login__input {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: auto;
+    color: #fff;
+    background: none;
+    border: none;
+    border-bottom: #fff 1px solid;
+    margin-bottom: 30px;
+    width: 100%;
+    
+}
+
+.login__button {
+    margin-top: 216px;
+    padding: 0;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.login__button:hover{
+    opacity: 60%;
+    cursor: pointer;
+}
+
+.register__text {
+    margin-top: 16px;
+    padding: 0;
+    width: 100%;
+    height: 17px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.register__text-link{
+    text-decoration: none;
+    color: #fff;
+}
+
+.register__text-link:hover{
+    text-decoration: underline;
+    opacity: 60%;
+    cursor: pointer;
+}

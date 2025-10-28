@@ -1,0 +1,23 @@
+{
+  "name": "web_project_around_express",
+  "version": "1.0.0",
+  "description": "A simple web project using Express.js",
+  "main": "app.js",
+  "author": "Alexander Artemiev",
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.32.0",
+    "nodemon": "^3.1.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "lint": "npx eslint ."
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.16.4"
+  }
+}

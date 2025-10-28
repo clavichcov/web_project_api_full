@@ -1,0 +1,51 @@
+.body{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    background-color: #000000;
+}
+
+.page{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+    
+    color: #FFFFFF;
+    margin: 0;
+    width: auto;
+    font-family: 'Inter Regular', Inter,  sans-serif;
+    font-size: 18px;
+    line-height: normal;
+}
+
+.content{
+    margin: 41px 200px 67px 200px;
+    width: 880px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+@media screen and (max-width:768px){
+    .page{
+        width: 768px;
+    }
+    .content{
+        margin: 41px 93.5px 50px 93.5px;
+        width: 581px;
+    }
+}
+
+@media screen and (max-width:320px){
+    .page{
+        width: 320px;
+    }
+    .content{
+        margin: 41px 19px 50px 19px;
+        width: 282px;
+        
+    }
+
+}

@@ -1,0 +1,112 @@
+/*.form--profile,
+.form--place,
+.form--card-delete,
+.form--change-imgprofile {
+    display: flex;
+    position: relative;
+    padding-bottom: 25px;
+    margin-top: 40px;
+    height: 258px;
+    width: 358px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    color: #000000;
+    padding: 36px 36px;
+    flex-direction: column;
+}*/
+
+.form__title {
+    margin: 0;
+    width: 358px;
+    margin-bottom: 24px;
+}
+
+.form__input {
+    margin-top: 30px;
+    padding: 0;
+    height: 27px;
+    width: 358px;
+    border: none;
+    border-bottom: 2px solid #C4C4C4;
+}
+
+.form__wrapper {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 40px;
+    
+}
+
+.form__input_name-error {
+    border-bottom: none;
+}
+
+.form__input_extra-error {
+    border-bottom: none;
+}
+
+.form__profile_submit,
+.form__place_submit,
+.form__card_submit,
+.form__change_submit {
+    display: block;
+    margin-top: 48px;
+    padding: 0px;
+    height: 50px;
+    min-height: 50px;
+    width: 358px;
+    background-color: #FFFFFF;
+    border: 2px solid #C4C4C4;
+    color: #C4C4C4;
+}
+
+.form__submit-delete-button {
+    display: block;
+    margin-top: 48px;
+    padding: 0px;
+    height: 50px;
+    min-height: 50px;
+    width: 358px;
+    background-color: #000000;
+    border: 2px solid #C4C4C4;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.form__submit_card-delete-button:hover {
+    opacity: 60%;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    
+
+}
+
+@media screen and (max-width: 320px) {
+    .form {
+        padding: 25px 22px 25px 22px;
+        width: 320px;
+        margin-top: 5px;
+    }
+
+    .form--profile,
+    .form--place,
+    .form--card-delete,
+    .form--change-imgprofile {
+        width: 320px;
+    }
+
+    .form__title {
+        width: 238px;
+    }
+
+    .form__input {
+        width: 238px;
+    }
+
+    .form__submit-button {
+        width: 238px;
+    }
+}
