@@ -1,4 +1,4 @@
-export const BASE_URL = "https://se-register-api.en.tripleten-services.com/v1";
+export const BASE_URL = "https://api.sprint19.chickenkiller.com";
 
 export const authorize = (email, password) => {
     return fetch(`${BASE_URL}/signin`, {

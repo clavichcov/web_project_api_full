@@ -20,6 +20,20 @@ export default function App() {
   const navigate = useNavigate();
   const location = useLocation();
     
+  const createApiAcces = () => {
+      const jwt = getToken();
+      if (!jwt) return null;
+    
+      return new Api({
+        baseUrl: "https://api.sprint19.chickenkiller.com",
+        headers: {
+          Accept: "application/json",
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${jwt}`, 
+        }
+      });
+    };
+  
   const handleRegistration = ({ email, password }) => {
     return auth.register(email, password)
         .then((data) => {
@@ -51,22 +65,6 @@ export default function App() {
         })
         .catch(console.error);
   }
-
-  
-    
-    const createApiAcces = () => {
-      const jwt = getToken();
-      if (!jwt) return null;
-    
-      return new Api({
-        baseUrl: "https://se-register-api.en.tripleten-services.com/v1",
-        headers: {
-          Accept: "application/json",
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${jwt}`, 
-        }
-      });
-    };
 
     useEffect (() => {
       const apiInstance = createApiAcces();
