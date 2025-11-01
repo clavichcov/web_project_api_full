@@ -1,4 +1,4 @@
-import {IMAGES} from '../../../utils/constants.jsx';
+import {IMAGES} from '../../../utils/constants.js';
 
 export function InfoTooltip({ isSuccess }) {
 

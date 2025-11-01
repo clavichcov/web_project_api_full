@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Routes, Route, Navigate, useNavigate, useLocation} from "react-router-dom";
-import {IMAGES} from '../../utils/constants.jsx';
+import {IMAGES} from '../../utils/constants.js';
 import CurrentUserContext from '../../contexts/CurrentUserContext.js';
 import { removeToken } from "../../utils/token";
 

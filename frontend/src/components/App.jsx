@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Navigate, useNavigate, useLocation} from "react-router-dom";
 import {Header} from '../components/Header/Header.jsx';
-import {IMAGES} from '../utils/constants.jsx';
+import {IMAGES, BASE_URLS} from '../utils/constants.js';
 import {Login} from '../components/Login/Login.jsx';
 import {Register} from '../components/Register/Register.jsx';
 import { Main } from '../components/Main/Main.jsx';
@@ -25,7 +25,7 @@ export default function App() {
       if (!jwt) return null;
     
       return new Api({
-        baseUrl: "https://api.sprint19.chickenkiller.com",
+        baseUrl: BASE_URLS.baseUrlApi,
         headers: {
           Accept: "application/json",
           'Content-Type': 'application/json',

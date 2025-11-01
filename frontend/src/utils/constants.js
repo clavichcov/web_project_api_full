@@ -21,3 +21,8 @@ export const IMAGES = {
   imgCorrect,
   imgError
 };
+export const BASE_URLS = {
+  baseUrl: "http://sprint19.chickenkiller.com",
+  baseUrlWww: "http://www.sprint19.chickenkiller.com",
+  baseUrlApi: "https://api.sprint19.chickenkiller.com"
+};

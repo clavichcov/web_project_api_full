@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import  Api  from '../../utils/Api.js';
-import {IMAGES} from '../../utils/constants.jsx';
+import {IMAGES, BASE_URLS} from '../../utils/constants.js';
 import { Popup } from '../Popup/Popup.jsx';
 import { NewCard } from '../Popup/NewCard/NewCard.jsx';
 import { EditProfile } from '../Popup/EditProfile/EditProfile.jsx';
@@ -21,7 +21,7 @@ export function Main() {
     const { currentUser, setCurrentUser } = useContext(CurrentUserContext);
     const jwt = getToken();
     const apiAcces = new Api({
-              baseUrl: "https://se-register-api.en.tripleten-services.com/v1",
+              baseUrl: BASE_URLS.baseUrlApi,
               
               headers: {
                 Accept: "application/json",

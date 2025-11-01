@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import {IMAGES} from '../../../../utils/constants.jsx';
+import {IMAGES} from '../../../../utils/constants.js';
 import { Popup } from '../../../Popup/Popup.jsx';
 import { RemoveCard } from "../../../Popup/RemoveCard/RemoveCard.jsx";
 import  CurrentUserContext  from '../../../../contexts/CurrentUserContext.js';
