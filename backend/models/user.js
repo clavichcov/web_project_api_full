@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const isEmail = require('validator/lib/isEmail');
+const bcrypt = require('bcrypt');
 
 const userSchema = new mongoose.Schema({
   email: {
@@ -16,6 +17,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, 'La contraseña es obligatoria'],
     minlength: [6, 'Debe tener al menos 6 caracteres'],
+    select: false
   },
 
   name: {
@@ -47,5 +49,24 @@ const userSchema = new mongoose.Schema({
     default: 'https://pictures.s3.yandex.net/resources/avatar_1604080799.jpg'
   },
 });
+
+userSchema.statics.findUserByCredentials = function findUserByCredentials (email, password) {
+  return this.findOne({ email })
+    .select('+password')
+    .then((user) => {
+      if (!user) {
+        return Promise.reject(new Error('Correo electrónico o contraseña incorrectos'));
+      }
+
+      return bcrypt.compare(password, user.password)
+        .then((matched) => {
+          if (!matched) {
+            return Promise.reject(new Error('Correo electrónico o contraseña incorrectos'));
+          }
+
+          return user;
+        });
+    });
+};
 
 module.exports = mongoose.model('user', userSchema);
