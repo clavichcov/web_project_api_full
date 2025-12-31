@@ -9,7 +9,6 @@ const bodyParser = require('body-parser');
 const bcrypt = require('bcryptjs');
 const User = require('./models/user');
 const { login, createUser } = require('./controllers/users');
-const { createUser, login } = require('./controllers/auth');
 const auth = require('./middlewares/auth');
 
 const { PORT = 3000, BASE_PATH } = process.env;
