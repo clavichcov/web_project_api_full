@@ -107,5 +107,20 @@ module.exports.updateAvatar = (req, res) => {
 };
 
 module.exports.getUserMe = (req, res) => {
-
+  User.findById(req.user._id)
+    .then(user => {
+      if (!user) {
+        return res.status(404).send({ message: 'Usuario no encontrado' });
+      }
+      res.send({
+        _id: user._id,
+        name: user.name,
+        about: user.about,
+        avatar: user.avatar,
+        email: user.email
+      });
+    })
+    .catch(err => {
+      res.status(500).send({ message: 'Error del servidor' });
+    });
 }
